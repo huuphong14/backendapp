@@ -11,11 +11,10 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
-    minlength: 8,
-    select: false, 
+    minlength: 6,
   },
   isVerified: { type: Boolean, default: false },
-  otp: { type: String, select: false }, 
+  otp: { type: String}, 
   otpExpires: { type: Date },
   refreshToken: { type: String },
 });
